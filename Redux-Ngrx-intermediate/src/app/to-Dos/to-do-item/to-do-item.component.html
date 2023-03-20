@@ -1,0 +1,17 @@
+<li [class.completed]="itemTodo.isCompleted"
+    [class.editing]="isEditing">
+    <div class="view">
+        <input class="toggle" 
+                [formControl]="isChkCompleted"
+                type="checkbox">
+        <label (dblclick)="editInput()">
+            {{itemTodo.text}}
+        </label>
+        <button class="destroy" (click)="deleteToDo()"></button>
+    </div>
+    <input class="edit"
+            type="text"
+            [formControl]="txtInput"
+            (blur)="finishEdit()"
+            #fisicInput>
+</li>

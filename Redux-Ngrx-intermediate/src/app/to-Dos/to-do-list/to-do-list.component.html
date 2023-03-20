@@ -1,0 +1,5 @@
+<ul class="todo-list">    
+    <!-- editing and `completed`-->
+    <app-to-do-item *ngFor="let todo of todoList | filterTodoPipe:currentFilter"
+                [itemTodo]="todo"    ></app-to-do-item>
+</ul>
